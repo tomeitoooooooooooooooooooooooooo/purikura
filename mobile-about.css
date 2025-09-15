@@ -1,0 +1,408 @@
+/* Mobile-specific CSS for about.html */
+/* This file will be loaded only on mobile devices */
+
+/* Override desktop styles for mobile */
+@media screen and (max-width: 768px) {
+  
+  /* Background and body adjustments */
+  html, body {
+    min-height: 100vh;
+    padding-bottom: 60px;
+    overflow-x: hidden;
+  }
+
+  /* Navigation mobile optimization - FIXED CENTERING */
+  .liquid-glass-navigation {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: calc(100vw - 20px);
+    max-width: 360px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .liquid-nav {
+    padding: 6px;
+    gap: 2px;
+    border-radius: 25px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    display: flex;
+  }
+
+  .nav-item {
+    padding: 6px 8px;
+    font-size: 0.7rem;
+    border-radius: 20px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* FIXED LOGO CENTERING */
+  .liquid-nav img {
+    width: 24px !important;
+    height: 24px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    vertical-align: middle !important;
+    display: inline-block !important;
+    border-radius: 12px !important;
+  }
+
+  /* Title section mobile optimization */
+  .title-about {
+    position: static;
+    top: auto;
+    right: auto;
+    max-width: 100%;
+    text-align: center;
+    margin: 80px 0 30px 0;
+    padding: 0 20px;
+    white-space: normal;
+  }
+
+  .title-1 {
+    font-size: 60px !important;
+    line-height: 1.1;
+    font-weight: bold;
+  }
+
+  /* Main cards container */
+  .cards-about {
+    margin-top: 0;
+    padding: 0 15px;
+  }
+
+  /* About cards mobile optimization - FOLLOWING SPECIFICATION */
+  .liquid-glass-card2,
+  .liquid-glass-card3 {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 30px 20px;
+    margin: 20px auto;
+    width: calc(100vw - 30px);
+    max-width: 380px; /* Following mobile card layout standard */
+    min-height: auto;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px) saturate(1.8);
+    -webkit-backdrop-filter: blur(20px) saturate(1.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* SPECIFICATION: Images smaller, then title and description below */
+  .liquid-glass-card2 img,
+  .liquid-glass-card3 img {
+    width: 160px !important; /* Even smaller as specified */
+    max-width: 100% !important;
+    height: auto !important;
+    margin-bottom: 20px !important;
+    margin-left: 0 !important;
+    border-radius: 15px;
+    order: 1; /* Image first */
+  }
+
+  /* Text content follows images */
+  .liquid-glass-card2 span,
+  .liquid-glass-card3 span {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    order: 2; /* Content after image */
+  }
+
+  /* About us section text */
+  .liquid-glass-card2 p {
+    font-size: 12px;
+    margin-bottom: 5px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: normal;
+  }
+
+  .liquid-glass-card2 h1.liquid-glass-card.h1 {
+    font-size: 22px !important;
+    margin: 10px 0 15px 0;
+    background: linear-gradient(45deg, #fff, #f0f0f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: bold;
+  }
+
+  .liquid-glass-card2 h1.liquid-glass-card.p {
+    font-size: 13px !important;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-weight: normal;
+    color: white;
+    background: none;
+    -webkit-text-fill-color: white;
+    text-align: left;
+  }
+
+  /* Button optimization */
+  .liquid-glass-button {
+    padding: 12px 20px;
+    font-size: 0.85rem;
+    width: 100%;
+    max-width: 200px;
+    margin-top: 15px;
+  }
+
+  /* Developer card special handling */
+  .liquid-glass-card3 {
+    padding: 30px 20px;
+  }
+
+  .liquid-glass-card3 p {
+    font-size: 12px;
+    margin-bottom: 5px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: normal;
+  }
+
+  .liquid-glass-card3 h1.liquid-glass-card.h1 {
+    font-size: 22px !important;
+    margin: 10px 0 15px 0;
+    background: linear-gradient(45deg, #fff, #f0f0f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: bold;
+  }
+
+  .liquid-glass-card3 .card {
+    width: 100% !important;
+    max-width: 320px;
+    height: auto !important;
+    margin: 20px auto 0 auto;
+    padding: 20px 15px;
+    background-color: #F8FBFE;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .card__content {
+    padding: 15px 10px;
+  }
+
+  .card__content h1 {
+    font-size: 1.4rem !important;
+    margin-bottom: 8px !important;
+    margin-top: 8px !important;
+    color: #333;
+    font-weight: bold;
+  }
+
+  .card__content h2 {
+    font-size: 0.95rem !important;
+    margin-bottom: 8px !important;
+    margin-top: 5px !important;
+    color: #666;
+    font-weight: normal;
+  }
+
+  .card__content p {
+    font-size: 0.85rem !important;
+    line-height: 1.5;
+    margin-top: 12px !important;
+    color: #333;
+    text-align: left;
+  }
+
+  /* Animated button mobile optimization */
+  .animated-button {
+    padding: 14px 28px;
+    font-size: 14px;
+    margin-top: 20px !important;
+    margin-left: 0 !important;
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+    background-color: #ffefef;
+    border: 2px solid #ffffff;
+    border-radius: 12px;
+    color: #1f387e;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .animated-button:hover {
+    background-color: #e6f3ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .animated-button .text {
+    color: #1f387e !important;
+    font-weight: 600;
+    z-index: 10;
+  }
+
+  .animated-button svg {
+    width: 20px;
+    fill: #1f387e;
+  }
+
+  /* Hide horizontal scroll */
+  .background {
+    overflow-x: hidden;
+  }
+
+  /* Improve touch targets */
+  .liquid-glass-button,
+  .nav-item,
+  .animated-button {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Optimize typography for mobile */
+  * {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+}
+
+  /* Extra small devices (phones in portrait mode) */
+@media screen and (max-width: 480px) {
+  
+  .liquid-nav {
+    padding: 4px;
+    gap: 1px;
+  }
+
+  .nav-item {
+    padding: 4px 6px;
+    font-size: 0.65rem;
+  }
+
+  .title-1 {
+    font-size: 45px !important;
+  }
+
+  .liquid-glass-card2,
+  .liquid-glass-card3 {
+    padding: 25px 15px;
+    margin: 15px auto;
+    max-width: 340px;
+  }
+
+  .liquid-glass-card2 img,
+  .liquid-glass-card3 img {
+    width: 160px !important;
+  }
+
+  .liquid-glass-card2 h1.liquid-glass-card.h1,
+  .liquid-glass-card3 h1.liquid-glass-card.h1 {
+    font-size: 20px !important;
+  }
+
+  .liquid-glass-card2 h1.liquid-glass-card.p {
+    font-size: 12px !important;
+  }
+
+  .card__content h1 {
+    font-size: 1.2rem !important;
+  }
+
+  .card__content h2 {
+    font-size: 0.85rem !important;
+  }
+
+  .card__content p {
+    font-size: 0.8rem !important;
+  }
+
+  .animated-button {
+    font-size: 13px;
+    padding: 12px 20px;
+    max-width: 250px;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  
+  .title-about {
+    margin: 60px 0 20px 0;
+  }
+
+  .title-1 {
+    font-size: 45px !important;
+  }
+
+  .liquid-glass-card2,
+  .liquid-glass-card3 {
+    flex-direction: row !important;
+    text-align: left !important;
+    min-height: auto;
+  }
+
+  .liquid-glass-card2 img,
+  .liquid-glass-card3 img {
+    width: 200px !important;
+    margin-right: 20px !important;
+    margin-bottom: 0 !important;
+  }
+
+  .liquid-glass-card2 span,
+  .liquid-glass-card3 span {
+    display: inline-block !important;
+    vertical-align: top !important;
+    width: auto !important;
+  }
+
+  .liquid-glass-card2 span:last-child,
+  .liquid-glass-card3 span:last-child {
+    margin-left: 20px !important;
+    flex: 1;
+  }
+}
+
+/* Tablet portrait adjustments */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  
+  .liquid-glass-card2,
+  .liquid-glass-card3 {
+    max-width: 500px;
+    padding: 30px 25px;
+  }
+
+  .liquid-glass-card2 img,
+  .liquid-glass-card3 img {
+    width: 320px !important;
+  }
+
+  .title-1 {
+    font-size: 70px !important;
+  }
+
+  .card__content h1 {
+    font-size: 1.8rem !important;
+  }
+
+  .card__content h2 {
+    font-size: 1.2rem !important;
+  }
+
+  .card__content p {
+    font-size: 1rem !important;
+  }
+}
