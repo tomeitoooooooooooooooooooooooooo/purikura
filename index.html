@@ -342,16 +342,25 @@
 
   <script>
     window.onload = function () {
-      const wrapper = document.querySelector(".loading-wrapper");
-      const alreadyVisited = localStorage.getItem("visited");
+      const wrapper = document.querySelector('.loading-wrapper');
+      const alreadyVisited = localStorage.getItem('visited');
+
+      if (!wrapper) return;
 
       if (!alreadyVisited) {
+        // Show briefly, then fade and remove to avoid blocking touches/scroll
         setTimeout(() => {
-          wrapper.classList.add("fade-out");
+          wrapper.classList.add('fade-out');
+          setTimeout(() => {
+            if (wrapper && wrapper.parentNode) {
+              wrapper.parentNode.removeChild(wrapper);
+            }
+          }, 600); // matches CSS transition 0.5s
         }, 1500);
-        localStorage.setItem("visited", "true");
+        localStorage.setItem('visited', 'true');
       } else {
-        wrapper.style.display = "none";
+        // On repeat visits, don’t render the overlay at all
+        wrapper.style.display = 'none';
       }
     };
   </script>
