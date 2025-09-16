@@ -9,6 +9,8 @@
     min-height: 100vh;
     padding-bottom: 60px;
     overflow-x: hidden;
+    /* Ensure vertical scrolling is allowed on mobile */
+    overflow-y: auto !important;
   }
 
   /* Navigation mobile optimization - FIXED CENTERING */
@@ -257,6 +259,8 @@
     overflow-x: hidden;
     position: relative;
     height: 100%;
+    /* Explicitly allow vertical scroll */
+    overflow-y: auto !important;
   }
 
   body {
@@ -267,6 +271,8 @@
     min-height: 100vh;
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
+    /* Explicitly allow vertical scroll */
+    overflow-y: auto !important;
   }
 
   /* Fix background scrolling */
