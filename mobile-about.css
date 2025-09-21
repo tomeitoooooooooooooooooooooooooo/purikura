@@ -1,11 +1,8 @@
 /* Mobile-specific CSS for about.html */
-/* This file will be loaded only on mobile devices */
 
 @media screen and (max-width: 768px) {
 
-  /* ====================== */
-  /* 1. ナビゲーション */
-  /* ====================== */
+  /* ナビゲーション中央揃え・縮小 */
   .liquid-glass-navigation {
     position: fixed;
     top: 10px;
@@ -17,155 +14,105 @@
     justify-content: center;
     z-index: 1000;
   }
-
-  .liquid-nav {
-    padding: 4px 6px;
-    gap: 2px;
-  }
-
   .liquid-nav img {
     width: 20px !important;
     height: 20px !important;
     border-radius: 8px;
-    margin-right: 5px;
   }
-
   .nav-item {
     font-size: 0.7rem;
     padding: 4px 6px;
-    white-space: nowrap;
   }
 
-  /* ====================== */
-  /* 2. タイトル */
-  /* ====================== */
+  /* タイトル小さく・右寄せ */
   .title-about {
     margin: 60px 15px 20px 15px;
     text-align: right;
   }
-
   .title-1 {
-    font-size: 36px !important;
-    line-height: 1.1;
-    font-weight: bold;
+    font-size: 32px !important;
+    line-height: 1.2;
   }
 
-  /* ====================== */
-  /* 3. カード部分（共通） */
-  /* ====================== */
+  /* カード縦並び・枠なし */
   .cards-about {
-    margin-top: 0;
     padding: 0 15px;
   }
-
   .liquid-glass-card2,
   .liquid-glass-card3 {
     display: flex;
-    flex-direction: column !important; /* 縦並び強制 */
+    flex-direction: column !important;
     align-items: center;
     text-align: center;
     width: calc(100% - 30px);
-    max-width: 380px;
     margin: 20px auto;
-    padding: 0; /* 余白を最小に */
-    background: none !important; /* ✅ 枠や背景削除 */
+    padding: 10px;
+    background: none !important;
     border: none !important;
     box-shadow: none !important;
   }
 
-  /* ====================== */
-  /* 4. 画像 */
-  /* ====================== */
+  /* 画像リサイズ */
   .liquid-glass-card2 img,
   .liquid-glass-card3 img {
     max-width: 100% !important;
-    width: 180px !important;   /* 標準サイズ */
+    width: 160px !important;
     height: auto;
     border-radius: 12px;
     margin: 0 auto 15px auto;
   }
 
-  /* ====================== */
-  /* 5. テキスト */
-  /* ====================== */
-  .liquid-glass-card2 span,
-  .liquid-glass-card3 span {
-    display: block;
-    width: 100%;
-    margin: 0;
-    text-align: center;
-  }
-
+  /* テキストリサイズ */
   .liquid-glass-card2 h1,
   .liquid-glass-card3 h1 {
     font-size: 18px !important;
-    margin: 10px 0;
+    margin: 8px 0;
     font-weight: bold;
     color: #fff;
   }
-
   .liquid-glass-card2 p,
   .liquid-glass-card3 p {
     font-size: 13px;
     line-height: 1.6;
     margin-bottom: 8px;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.85);
   }
 
-  /* ====================== */
-  /* 6. ボタン */
-  /* ====================== */
+  /* 開発者カード内の白い.boxカードも縮小 */
+  .card {
+    width: 100% !important;
+    max-width: 300px;
+    height: auto !important;
+    margin: 15px auto;
+    padding: 15px;
+  }
+  .card__content h1 {
+    font-size: 1.2rem !important;
+  }
+  .card__content h2 {
+    font-size: 0.9rem !important;
+  }
+  .card__content p {
+    font-size: 0.8rem !important;
+    line-height: 1.5;
+  }
+
+  /* ボタン小さく */
   .liquid-glass-button,
   .animated-button {
     font-size: 0.8rem;
     padding: 10px 16px;
-    margin-top: 10px;
     width: 100%;
     max-width: 200px;
+    margin: 10px auto 0 auto;
   }
 }
 
-/* スマホ小サイズ (〜480px) */
+/* スマホ小サイズ（〜480px） */
 @media screen and (max-width: 480px) {
-  .title-1 {
-    font-size: 28px !important;
-  }
-
+  .title-1 { font-size: 26px !important; }
   .liquid-glass-card2 img,
-  .liquid-glass-card3 img {
-    width: 150px !important;
-  }
-
-  .liquid-glass-card2 h1,
-  .liquid-glass-card3 h1 {
-    font-size: 16px !important;
-  }
-
+  .liquid-glass-card3 img { width: 140px !important; }
   .liquid-glass-card2 p,
-  .liquid-glass-card3 p {
-    font-size: 12px !important;
-  }
-}
-
-/* 横向き (landscape) */
-@media screen and (max-width: 768px) and (orientation: landscape) {
-  .liquid-glass-card2,
-  .liquid-glass-card3 {
-    flex-direction: row !important;
-    text-align: left;
-    max-width: 600px;
-  }
-
-  .liquid-glass-card2 img,
-  .liquid-glass-card3 img {
-    width: 200px !important;
-    margin-right: 20px;
-    margin-bottom: 0;
-  }
-
-  .liquid-glass-card2 span:last-child,
-  .liquid-glass-card3 span:last-child {
-    flex: 1;
-    margin-left: 20px;
-  }
+  .liquid-glass-card3 p { font-size: 12px !important; }
 }
