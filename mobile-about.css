@@ -1,5 +1,25 @@
 @media screen and (max-width: 768px) {
-  body {
-    background-color: pink !important;
+  .cards-about .liquid-glass-card2 img,
+  .cards-about .liquid-glass-card3 img {
+    width: 160px !important;
+    max-width: 100% !important;
+    height: auto !important;
+    border: 2px solid red !important; /* ←確認用 */
+  }
+
+  .liquid-glass-card2 span,
+  .liquid-glass-card3 span {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 auto 10px auto !important;
+    text-align: center !important;
+    border: 1px dashed blue !important; /* ←確認用 */
+  }
+
+  .liquid-glass-card2,
+  .liquid-glass-card3 {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
   }
 }
