@@ -405,4 +405,117 @@
   .card__content p {
     font-size: 1rem !important;
   }
+
+
+  @media screen and (max-width: 768px) {
+
+  /* ====================== */
+  /* 1. ナビゲーション中央揃え・縮小 */
+  /* ====================== */
+  .liquid-glass-navigation {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 20px);
+    max-width: 340px;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+  }
+
+  .liquid-nav {
+    padding: 4px 6px;
+    gap: 2px;
+  }
+
+  .liquid-nav img {
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 8px;
+    margin-right: 5px;
+  }
+
+  .nav-item {
+    font-size: 0.7rem;
+    padding: 4px 6px;
+  }
+
+  /* ====================== */
+  /* 2. タイトル部分 (右寄せ＆縮小) */
+  /* ====================== */
+  .title-about {
+    margin: 60px 15px 20px 15px;
+    text-align: right;
+  }
+
+  .title-1 {
+    font-size: 40px !important;
+    line-height: 1.1;
+  }
+
+  /* ====================== */
+  /* 3. カード部分（写真 + テキスト縦並び） */
+  /* ====================== */
+  .liquid-glass-card2,
+  .liquid-glass-card3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: calc(100% - 30px);
+    max-width: 380px;
+    margin: 20px auto;
+    padding: 20px 15px;
+
+    /* ✅ 枠を消す */
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .liquid-glass-card2 img,
+  .liquid-glass-card3 img {
+    width: 180px !important;
+    height: auto;
+    border-radius: 12px;
+    margin: 0 auto 15px auto;
+  }
+
+  .liquid-glass-card2 span,
+  .liquid-glass-card3 span {
+    display: block;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+
+  .liquid-glass-card2 h1,
+  .liquid-glass-card3 h1 {
+    font-size: 18px !important;
+    margin: 10px 0;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .liquid-glass-card2 p,
+  .liquid-glass-card3 p {
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  /* ボタン調整 */
+  .liquid-glass-button,
+  .animated-button {
+    font-size: 0.8rem;
+    padding: 10px 16px;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+
 }
