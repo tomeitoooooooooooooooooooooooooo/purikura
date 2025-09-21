@@ -1,10 +1,18 @@
 @media screen and (max-width: 768px) {
-  .cards-about .liquid-glass-card2 img,
-  .cards-about .liquid-glass-card3 img {
-    width: 160px !important;
+  .liquid-glass-card2,
+  .liquid-glass-card3 {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    background: yellow !important; /* ←確認用 */
+  }
+
+  .liquid-glass-card2 img,
+  .liquid-glass-card3 img {
+    width: 120px !important;
     max-width: 100% !important;
     height: auto !important;
-    border: 2px solid red !important; /* ←確認用 */
+    border: 5px solid red !important; /* ←確認用 */
   }
 
   .liquid-glass-card2 span,
@@ -13,13 +21,6 @@
     width: 100% !important;
     margin: 0 auto 10px auto !important;
     text-align: center !important;
-    border: 1px dashed blue !important; /* ←確認用 */
-  }
-
-  .liquid-glass-card2,
-  .liquid-glass-card3 {
-    background: none !important;
-    border: none !important;
-    box-shadow: none !important;
+    border: 2px dashed blue !important; /* ←確認用 */
   }
 }
