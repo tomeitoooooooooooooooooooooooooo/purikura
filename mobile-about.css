@@ -3,8 +3,6 @@
 
 /* Override desktop styles for mobile */
 @media screen and (max-width: 768px) {
-  
-  /* Background and body adjustments */
   html, body {
     height: 100%;
     min-height: 100vh;
@@ -12,6 +10,24 @@
     overflow-x: hidden;            /* 横スクロール禁止 */
     overflow-y: auto !important;   /* 縦スクロール許可 */
     -webkit-overflow-scrolling: touch; /* 慣性スクロール */
+  }
+  body {
+    display: block !important;
+    align-items: initial !important;
+    justify-content: initial !important;
+  }
+
+  /* カードのオフセット解除 */
+  .liquid-glass-card2,
+  .liquid-glass-card3 {
+    position: relative !important;
+    top: 0 !important;
+  }
+
+  /* 背景やカード群のスクロール制御を解除 */
+  .background,
+  .cards-about {
+    overflow: visible !important;
   }
 
   /* Navigation mobile optimization - FIXED CENTERING */
@@ -408,6 +424,7 @@
     font-size: 1rem !important;
   }
 }
+
 
 
 
