@@ -75,7 +75,7 @@
 
   /* Title section mobile optimization */
   .title-about {
-    position: absolute !important;
+    position: relative !important;
     top: 60px;             /* ナビゲーションからの距離を調整 */
     right: 20px;           /* 右寄せ */
     width: auto;
@@ -424,6 +424,7 @@
     font-size: 1rem !important;
   }
 }
+
 
 
 
