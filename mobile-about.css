@@ -56,24 +56,25 @@
 
   /* Title section mobile optimization */
   .title-about {
-    position: relative !important;
-    width: 100%;
-    text-align: right !important;
-    margin: 40px 15px 10px 15px !important;
+    position: absolute !important;
+    top: 60px;             /* ナビゲーションからの距離を調整 */
+    right: 20px;           /* 右寄せ */
+    width: auto;
+    margin: 0;
     padding: 0;
+    text-align: right !important;
+    z-index: 900;          /* カードより上に */
   }
 
   .title-about .title-1 {
-    font-size: 28px !important;  /* モバイル用に小さく */
+    font-size: 28px !important; /* モバイル用に小さく */
     color: #fff;
-    margin: 0;
     line-height: 1.2;
   }
 
-  /* Main cards container */
+  /* カード全体を下に少し余白 */
   .cards-about {
-    margin-top: 0;
-    padding: 0 15px;
+    margin-top: 100px !important; /* タイトルが被らないように余白 */
   }
 
   /* About cards mobile optimization - FOLLOWING SPECIFICATION */
@@ -404,6 +405,7 @@
     font-size: 1rem !important;
   }
 }
+
 
 
 
