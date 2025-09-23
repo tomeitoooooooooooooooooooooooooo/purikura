@@ -75,25 +75,25 @@
 
   /* Title section mobile optimization */
   .title-about {
-    position: relative !important;
-    top: 60px;             /* ナビゲーションからの距離を調整 */
-    right: 20px;           /* 右寄せ */
-    width: auto;
-    margin: 0;
-    padding: 0;
+    position: relative !important;   /* ← absolute / fixed を上書き */
+    top: 0 !important;
+    right: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    margin: 80px 15px 20px 15px !important; /* ナビの下に余白 */
     text-align: right !important;
-    z-index: 900;          /* カードより上に */
+    z-index: auto !important;        /* 固定解除 */
   }
 
   .title-about .title-1 {
-    font-size: 56px !important; /* モバイル用に小さく */
-    color: #fff;
+    font-size: 32px !important;  /* モバイルで小さめ */
+    color: #fff !important;
     line-height: 1.2;
   }
 
-  /* カード全体を下に少し余白 */
+  /* カードとの間隔を調整 */
   .cards-about {
-    margin-top: 100px !important; /* タイトルが被らないように余白 */
+    margin-top: 20px !important;
   }
 
   /* About cards mobile optimization - FOLLOWING SPECIFICATION */
@@ -424,6 +424,7 @@
     font-size: 1rem !important;
   }
 }
+
 
 
 
