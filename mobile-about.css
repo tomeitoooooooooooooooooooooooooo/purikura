@@ -426,6 +426,7 @@
     font-size: 1rem !important;
   }
 }
+@media screen and (max-width: 768px) {
   body .background .title-about {
     position: relative !important;
     top: auto !important;
@@ -447,3 +448,4 @@
   .cards-about {
     margin-top: 20px !important;
   }
+}
