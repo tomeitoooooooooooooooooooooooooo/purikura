@@ -417,3 +417,24 @@
   }
 }
 
+  body .background .title-about {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    margin: 80px 15px 20px 15px !important;
+    text-align: right !important;
+    z-index: auto !important;
+  }
+
+  body .background .title-about .title-1 {
+    font-size: 32px !important;
+    color: #fff !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
+  }
+
+  .cards-about {
+    margin-top: 20px !important;
+  }
