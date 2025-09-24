@@ -24,29 +24,25 @@
 
   .liquid-glass-navigation {
     position: fixed;
-    top: 12px;
+    top: 10px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1000;
-    width: calc(100% - 16px);
-    max-width: 440px;
+    width: calc(100vw - 20px);
+    max-width: 360px;
     display: flex;
     justify-content: center;
   }
 
   .liquid-nav {
-    width: 100%;
-    padding: 4px 6px;
-    gap: 4px;
-    border-radius: 24px;
+    padding: 6px;
+    gap: 2px;
+    border-radius: 25px;
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
+    width: 100%;
     display: flex;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
   }
 
   .liquid-nav::-webkit-scrollbar {
@@ -56,15 +52,19 @@
   .liquid-nav img {
     width: 24px !important;
     height: 24px !important;
-    border-radius: 10px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    vertical-align: middle !important;
+    display: inline-block !important;
+    border-radius: 12px !important;
   }
 
   .nav-item {
-    padding: 5px 10px;
+    padding: 6px 8px;
     font-size: 0.7rem;
-    border-radius: 18px;
+    border-radius: 20px;
     white-space: nowrap;
-    flex: 0 0 auto;
+    flex-shrink: 0;
   }
 
   .title-about {
