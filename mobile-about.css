@@ -28,8 +28,8 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 1000;
-    width: calc(100% - 32px);
-    max-width: 320px;
+    width: calc(100% - 16px);
+    max-width: 440px;
     display: flex;
     justify-content: center;
   }
@@ -41,8 +41,16 @@
     border-radius: 24px;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .liquid-nav::-webkit-scrollbar {
+    display: none;
   }
 
   .liquid-nav img {
@@ -56,6 +64,7 @@
     font-size: 0.7rem;
     border-radius: 18px;
     white-space: nowrap;
+    flex: 0 0 auto;
   }
 
   .title-about {
