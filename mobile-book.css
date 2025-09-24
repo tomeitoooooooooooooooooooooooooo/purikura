@@ -1,0 +1,359 @@
+﻿/* Mobile-specific CSS for book.html */
+/* This file will be loaded only on mobile devices */
+
+/* Override desktop styles for mobile */
+@media screen and (max-width: 768px) {
+  
+  /* Background and body adjustments */
+  html, body {
+    min-height: 100vh;
+    padding-bottom: 60px;
+    overflow-x: hidden;
+  }
+
+  /* Title section mobile optimization - SPECIFICATION: above liquid glass card */
+  .title-about {
+    position: static;
+    top: auto;
+    right: auto;
+    max-width: 100%;
+    text-align: center;
+    margin: 80px 0 20px 0;
+    padding: 0 20px;
+    white-space: normal;
+    z-index: 10;
+    order: 1; /* Title first */
+  }
+
+  .title-1 {
+    font-size: 60px !important;
+    line-height: 1.1;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Main card mobile optimization - SPECIFICATION COMPLIANT */
+  .liquid-glass-card2 {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 30px 20px;
+    margin: 0 auto 40px auto;
+    width: calc(100vw - 30px);
+    max-width: 380px; /* Following mobile card layout standard */
+    min-height: auto;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px) saturate(1.8);
+    -webkit-backdrop-filter: blur(20px) saturate(1.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 24px;
+    order: 2; /* Card after title */
+  }
+
+  /* Image styling in card */
+  .liquid-glass-card2 img {
+    width: 280px !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin-bottom: 20px !important;
+    margin-left: 0 !important;
+  }
+
+  /* Text content in card */
+  .liquid-glass-card2 span {
+    display: block !important;
+    vertical-align: top !important;
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+
+  /* Book section text optimization - remove unwanted borders */
+  .liquid-glass-card2 p {
+    font-size: 14px !important;
+    margin-bottom: 12px;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .liquid-glass-card2 h1.liquid-glass-card.h1 {
+    background: linear-gradient(45deg, #fff, #f0f0f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 15px 0 10px 0;
+    line-height: 1.2;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+
+  /* Specific heading sizes - remove borders */
+  .liquid-glass-card2 h1[style*="font-size: 32px"] {
+    font-size: 24px !important;
+    background: linear-gradient(45deg, #fff, #f0f0f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .liquid-glass-card2 h1[style*="font-size: 48px"] {
+    font-size: 28px !important;
+    background: linear-gradient(45deg, #fff, #f0f0f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    border: none !important;
+    box-shadow: none !important;
+    margin-bottom: 20px;
+  }
+
+  /* Paragraph text optimization - remove all borders */
+  .liquid-glass-card2 p[style*="font-size: 25px"] {
+    font-size: 16px !important;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: white !important;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    font-weight: normal;
+  }
+
+  /* Important notice text - use developer card style */
+  .liquid-glass-card2 p[style*="color: #000000"] {
+    font-size: 13px !important;
+    line-height: 1.5;
+    background: #F8FBFE !important;
+    padding: 15px !important;
+    border-radius: 12px !important;
+    margin: 20px 0 !important;
+    color: #333 !important;
+    font-weight: normal;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    text-decoration: none !important;
+  }
+
+  /* Remove underline from notice text */
+  .liquid-glass-card2 p[style*="text-decoration: underline"] {
+    text-decoration: none !important;
+  }
+
+  /* Button container */
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+  }
+
+  /* Book button optimization - use PC version styling */
+  .button.type--C {
+    width: 100% !important;
+    max-width: 280px !important;
+    padding: 16px 36px !important;
+    font-size: 16px !important;
+    height: auto !important;
+    min-height: 50px;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none;
+    border-radius: 100px !important;
+    position: relative;
+    overflow: hidden;
+    background-color: #ffefef !important;
+    border: 4px solid transparent !important;
+    box-shadow: 0 0 0 2px #ffffff !important;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .button.type--C:hover {
+    box-shadow: 0 0 0 12px transparent !important;
+    border-radius: 12px !important;
+    transform: translateY(-2px);
+  }
+
+  .button__text {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #1f387e !important;
+    z-index: 10;
+    position: relative;
+    transform: translateX(-12px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .button.type--C:hover .button__text {
+    transform: translateX(12px);
+  }
+
+  /* Re-enable button animations for better UX */
+  .button__line {
+    display: block !important;
+  }
+
+  .button__drow1,
+  .button__drow2 {
+    display: block !important;
+  }
+
+  /* Hide horizontal scroll */
+  .background {
+    overflow-x: hidden;
+  }
+
+  /* Improve touch targets */
+  .button.type--C {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Optimize typography for mobile */
+  * {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+}
+
+/* Extra small devices (phones in portrait mode) */
+@media screen and (max-width: 480px) {
+
+  .title-1 {
+    font-size: 45px !important;
+  }
+
+  .liquid-glass-card2 {
+    padding: 20px 15px;
+    margin: 10px auto;
+  }
+
+  .liquid-glass-card2 img {
+    width: 250px !important;
+  }
+
+  .liquid-glass-card2 h1[style*="font-size: 32px"] {
+    font-size: 20px !important;
+  }
+
+  .liquid-glass-card2 h1[style*="font-size: 48px"] {
+    font-size: 24px !important;
+  }
+
+  .liquid-glass-card2 p[style*="font-size: 25px"] {
+    font-size: 14px !important;
+  }
+
+  .liquid-glass-card2 p[style*="color: #000000"] {
+    font-size: 12px !important;
+    padding: 12px;
+  }
+
+  .button.type--C {
+    max-width: 220px !important;
+    padding: 12px 16px !important;
+  }
+
+  .button__text {
+    font-size: 14px !important;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  
+  .title-about {
+    margin: 60px 0 20px 0;
+  }
+
+  .title-1 {
+    font-size: 45px !important;
+  }
+
+  .liquid-glass-card2 {
+    flex-direction: row !important;
+    text-align: left !important;
+    min-height: auto;
+    max-width: 600px;
+  }
+
+  .liquid-glass-card2 img {
+    width: 200px !important;
+    margin-right: 20px !important;
+    margin-bottom: 0 !important;
+  }
+
+  .liquid-glass-card2 span {
+    display: inline-block !important;
+    vertical-align: top !important;
+    width: auto !important;
+  }
+
+  .liquid-glass-card2 span:last-child {
+    margin-left: 20px !important;
+    flex: 1;
+  }
+
+  .container {
+    margin-top: 15px;
+  }
+}
+
+/* Tablet portrait adjustments */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  
+  .liquid-glass-card2 {
+    max-width: 500px;
+    padding: 30px 25px;
+  }
+
+  .liquid-glass-card2 img {
+    width: 320px !important;
+  }
+
+  .title-1 {
+    font-size: 70px !important;
+  }
+
+  .liquid-glass-card2 h1[style*="font-size: 32px"] {
+    font-size: 28px !important;
+  }
+
+  .liquid-glass-card2 h1[style*="font-size: 48px"] {
+    font-size: 36px !important;
+  }
+
+  .liquid-glass-card2 p[style*="font-size: 25px"] {
+    font-size: 18px !important;
+  }
+
+  .liquid-glass-card2 p[style*="color: #000000"] {
+    font-size: 15px !important;
+  }
+
+  .button.type--C {
+    max-width: 280px !important;
+    padding: 18px 24px !important;
+  }
+
+  .button__text {
+    font-size: 18px !important;
+  }
+}
+
+

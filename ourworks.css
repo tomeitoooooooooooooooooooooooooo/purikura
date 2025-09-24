@@ -1,4 +1,4 @@
-/* リキッドグラスコンテナ */
+﻿/* 繝ｪ繧ｭ繝・ラ繧ｰ繝ｩ繧ｹ繧ｳ繝ｳ繝・リ */
 .liquid-glass-container1 {
     perspective: 1000px;
     display: flex;
@@ -9,7 +9,7 @@
 }
 
 
-/* メニューデザイン */
+/* 繝｡繝九Η繝ｼ繝・じ繧､繝ｳ */
 .liquid-glass-navigation {
     position: fixed;
     top: 20px;
@@ -57,13 +57,40 @@
 .nav-item:hover::before {
     opacity: 1;
 }
-/* レスポンシブ対応 */
+/* 繝ｬ繧ｹ繝昴Φ繧ｷ繝門ｯｾ蠢・*/
 @media (max-width: 768px) {
+    .liquid-glass-navigation {
+        width: calc(100vw - 20px);
+        max-width: 360px;
+        display: flex;
+        justify-content: center;
+    }
+    .liquid-nav {
+        width: 100%;
+        padding: 4px;
+        gap: 2px;
+        border-radius: 25px;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+    .liquid-nav img {
+        width: 24px !important;
+        height: 24px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border-radius: 12px !important;
+    }
     .nav-item {
-        padding: 8px 10px;
-        font-size: 0.8rem;
+        padding: 5px 5px;
+        font-size: 0.7rem;
+        border-radius: 20px;
+        white-space: nowrap;
+        flex-shrink: 0;
     }
 }
+
+
 
 :root {
   --page-max-width: 1200px;
@@ -150,3 +177,6 @@ main {
     --page-padding: clamp(16px, 8vw, 28px);
   }
 }
+
+
+

@@ -1,0 +1,309 @@
+﻿/* Mobile-specific CSS for price.html */
+/* This file will be loaded only on mobile devices */
+
+/* Override desktop styles for mobile */
+@media screen and (max-width: 768px) {
+  
+  /* Background and body adjustments */
+  html, body {
+    min-height: 100vh;
+    padding-bottom: 60px;
+    overflow-x: hidden;
+  }
+
+  /* Title section mobile optimization - SPECIFICATION: above liquid glass card */
+  .title-about {
+    position: static;
+    top: auto;
+    right: auto;
+    max-width: 100%;
+    text-align: center;
+    margin: 80px 0 20px 0;
+    padding: 0 20px;
+    white-space: normal;
+    z-index: 10;
+    order: 1; /* Title first */
+  }
+
+  .title-1 {
+    font-size: 60px !important;
+    line-height: 1.1;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Main container following specification */
+  .cards-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    order: 2; /* Card container after title */
+  }
+
+  /* Main card container mobile optimization - SPECIFICATION: centered */
+  .liquid-glass-card2 {
+    margin: 0 auto 40px auto;
+    padding: 30px 20px;
+    width: calc(100vw - 30px);
+    max-width: 380px; /* Following mobile card layout standard */
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px) saturate(1.8);
+    -webkit-backdrop-filter: blur(20px) saturate(1.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 24px;
+    order: 3; /* Card after title */
+  }
+
+  /* Price cards container - centered layout */
+  .price {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  /* Individual price cards - perfectly centered */
+  .card,
+  .card1 {
+    width: 100% !important;
+    max-width: 280px !important;
+    height: auto !important;
+    margin: 0 auto;
+    position: relative;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card:hover,
+  .card1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Card content optimization - better centered layout */
+  .card__content {
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #ffffff;
+  }
+
+  /* Card images - optimized sizing */
+  .card__image {
+    width: 100%;
+    max-width: 220px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .card__image img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 220px;
+    border-radius: 12px;
+    display: block;
+  }
+
+  /* Card text content - improved typography */
+  .card__text {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .card__title {
+    font-size: 20px !important;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+    letter-spacing: 0.5px;
+  }
+
+  .card__title1,
+  .card__title2 {
+    font-size: 12px !important;
+    line-height: 1.5;
+    color: #666;
+    margin-bottom: 8px;
+    padding: 0 10px;
+  }
+
+  /* Card footer with price - enhanced styling */
+  .card__footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    border-top: 1px solid #f0f0f0;
+  }
+
+  .card__price {
+    font-size: 28px !important;
+    font-weight: bold;
+    color: #2c5aa0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Card badge (NEW) */
+  .card__badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ff6b6b;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 10;
+  }
+
+  /* Card effects optimization for mobile */
+  .card__shine,
+  .card__glow {
+    display: none; /* Disable complex effects on mobile for performance */
+  }
+
+  /* Remove hover effects on mobile */
+  .card:hover,
+  .card1:hover {
+    transform: none !important;
+  }
+
+  /* Hide horizontal scroll */
+  .background {
+    overflow-x: hidden;
+  }
+
+  /* Improve touch targets */
+
+  /* Optimize typography for mobile */
+  * {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+}
+
+/* Extra small devices (phones in portrait mode) */
+@media screen and (max-width: 480px) {
+
+  .title-1 {
+    font-size: 45px !important;
+  }
+
+  .liquid-glass-card2 {
+    padding: 20px 15px;
+    margin: 10px auto;
+  }
+
+  .card,
+  .card1 {
+    max-width: 280px !important;
+  }
+
+  .card__content {
+    padding: 15px 12px;
+  }
+
+  .card__image {
+    max-width: 220px;
+  }
+
+  .card__title {
+    font-size: 16px !important;
+  }
+
+  .card__title1,
+  .card__title2 {
+    font-size: 11px !important;
+  }
+
+  .card__price {
+    font-size: 20px !important;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  
+  .title-about {
+    margin: 60px 0 20px 0;
+  }
+
+  .title-1 {
+    font-size: 45px !important;
+  }
+
+  .price {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .card,
+  .card1 {
+    width: calc(50% - 10px) !important;
+    max-width: 250px !important;
+  }
+
+  .card__image {
+    max-width: 180px;
+  }
+}
+
+/* Tablet portrait adjustments */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  
+  .liquid-glass-card2 {
+    max-width: 500px;
+    padding: 30px 25px;
+  }
+
+  .title-1 {
+    font-size: 70px !important;
+  }
+
+  .card,
+  .card1 {
+    max-width: 350px !important;
+  }
+
+  .card__content {
+    padding: 25px 20px;
+  }
+
+  .card__image {
+    max-width: 280px;
+  }
+
+  .card__title {
+    font-size: 20px !important;
+  }
+
+  .card__title1,
+  .card__title2 {
+    font-size: 13px !important;
+  }
+
+  .card__price {
+    font-size: 26px !important;
+  }
+}
+
+
