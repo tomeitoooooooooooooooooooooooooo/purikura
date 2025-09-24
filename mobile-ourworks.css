@@ -1,0 +1,254 @@
+/* Mobile-specific CSS for ourworks.html */
+/* This file will be loaded only on mobile devices */
+
+/* Override desktop styles for mobile */
+@media screen and (max-width: 768px) {
+  /* Our Works mobile grid overrides */
+  main {
+    max-width: 100%;
+    padding: 72px 16px 32px;
+  }
+
+  .stage {
+    width: 100%;
+  }
+
+  .sphere {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .item__image {
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+    aspect-ratio: 3 / 4;
+  }
+
+  .item__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  
+  /* Background and body adjustments */
+  html, body {
+    min-height: 100vh;
+    padding-bottom: 60px;
+    overflow-x: hidden;
+  }
+
+  /* Navigation mobile optimization - FIXED CENTERING */
+  .liquid-glass-navigation {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: calc(100vw - 20px);
+    max-width: 360px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .liquid-nav {
+    padding: 6px;
+    gap: 2px;
+    border-radius: 25px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    display: flex;
+  }
+
+  .nav-item {
+    padding: 6px 8px;
+    font-size: 0.7rem;
+    border-radius: 20px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* FIXED LOGO CENTERING */
+  .liquid-nav img {
+    width: 24px !important;
+    height: 24px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    vertical-align: middle !important;
+    display: inline-block !important;
+    border-radius: 12px !important;
+  }
+
+  /* Title section mobile optimization */
+  .title-about {
+    position: static;
+    top: auto;
+    right: auto;
+    max-width: 100%;
+    text-align: center;
+    margin: 80px 0 30px 0;
+    padding: 0 20px;
+    white-space: normal;
+  }
+
+  .title-1 {
+    font-size: 60px !important;
+    line-height: 1.1;
+    font-weight: bold;
+  }
+
+  /* Main card mobile optimization */
+  .liquid-glass-card2 {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 40px 20px;
+    margin: 15px auto;
+    width: calc(100vw - 30px);
+    max-width: 400px;
+    min-height: auto;
+    justify-content: center;
+  }
+
+  /* Main heading in card */
+  .liquid-glass-card2 h1 {
+    font-size: 28px !important;
+    margin: 20px 0;
+    background: linear-gradient(45deg, #fff, #f0f0f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.3;
+  }
+
+  /* Button optimization */
+  .liquid-glass-button {
+    padding: 15px 25px;
+    font-size: 0.9rem;
+    width: 100%;
+    max-width: 220px;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .liquid-glass-button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Hide horizontal scroll */
+  .background {
+    overflow-x: hidden;
+  }
+
+  /* Improve touch targets */
+  .liquid-glass-button,
+  .nav-item {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Optimize typography for mobile */
+  * {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+}
+
+/* Extra small devices (phones in portrait mode) */
+@media screen and (max-width: 480px) {
+  
+  .liquid-nav {
+    padding: 4px;
+    gap: 1px;
+  }
+
+  .nav-item {
+    padding: 4px 6px;
+    font-size: 0.65rem;
+  }
+
+  .title-1 {
+    font-size: 45px !important;
+  }
+
+  .liquid-glass-card2 {
+    padding: 30px 15px;
+    margin: 10px auto;
+  }
+
+  .liquid-glass-card2 h1 {
+    font-size: 24px !important;
+  }
+
+  .liquid-glass-button {
+    padding: 12px 20px;
+    font-size: 0.8rem;
+    max-width: 200px;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  
+  .title-about {
+    margin: 60px 0 20px 0;
+  }
+
+  .title-1 {
+    font-size: 45px !important;
+  }
+
+  .liquid-glass-card2 {
+    padding: 30px 25px;
+  }
+
+  .liquid-glass-card2 h1 {
+    font-size: 24px !important;
+    margin: 15px 0;
+  }
+}
+
+/* Tablet portrait adjustments */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  
+  .liquid-glass-card2 {
+    max-width: 500px;
+    padding: 50px 30px;
+  }
+
+  .title-1 {
+    font-size: 70px !important;
+  }
+
+  .liquid-glass-card2 h1 {
+    font-size: 32px !important;
+  }
+
+  .liquid-glass-button {
+    padding: 18px 30px;
+    font-size: 1rem;
+    max-width: 250px;
+  }
+}
