@@ -215,4 +215,103 @@
   .card__title { font-size: 18px !important; }
   .card__price { font-size: 24px !important; }
 }
+/* === Priceモバイル用・最終上書きパッチ === */
+@media (max-width: 768px) {
+  :root { --nav-height: 72px; }  /* ナビの高さ＋α（必要なら増減OK） */
+
+  /* ナビと干渉しないように全体を下げる */
+  body .background {
+    padding-top: calc(var(--nav-height) + 16px) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  /* タイトルを“固定解除＆中央配置＆通常フロー”に */
+  body .background .title-about {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto 14px !important;
+    text-align: center !important;
+    white-space: normal !important;
+    z-index: auto !important;
+  }
+  body .background .title-about .title-1 {
+    font-size: 42px !important;
+    line-height: 1.15 !important;
+    margin: 0 !important;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.35) !important;
+  }
+
+  /* 料金ブロックをタイトル直下に“通常フロー”で配置 */
+  body .background .liquid-glass-card2 {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    width: min(420px, 92vw) !important;
+    margin: 8px auto 24px !important;
+    padding: 18px 14px !important;
+    border-radius: 20px !important;
+    background: rgba(255,255,255,0.12) !important;
+    backdrop-filter: blur(20px) saturate(1.8) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(1.8) !important;
+    border: 1px solid rgba(255,255,255,0.22) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 18px !important;
+  }
+
+  /* 料金カードのラッパーを中央寄せ */
+  body .background .price {
+    width: 100% !important;
+    max-width: 360px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    align-items: center !important;
+  }
+
+  /* 個別カードは幅を統一して中央に */
+  body .background .price .card,
+  body .background .price .card1 {
+    width: 100% !important;
+    max-width: 280px !important;
+    margin: 0 auto !important;
+    background: #fff !important;
+    border-radius: 16px !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important;
+    overflow: hidden !important;
+    position: relative !important;
+  }
+
+  /* 画像やテキストの内側余白もモバイル向けに */
+  body .background .price .card__content {
+    padding: 18px 14px !important;
+    text-align: center !important;
+  }
+  body .background .price .card__image { max-width: 220px !important; margin: 0 auto 14px !important; }
+  body .background .price .card__title { font-size: 18px !important; margin-bottom: 8px !important; }
+  body .background .price .card__price { font-size: 24px !important; }
+
+  /* ナビが重なる場合はこの値を少し増やしてください */
+  /* body .background { padding-top: 112px !important; } 例 */
+}
+
+/* さらに小さい端末向けの微調整 */
+@media (max-width: 480px) {
+  body .background { padding-top: calc(var(--nav-height) + 8px) !important; }
+  body .background .title-about .title-1 { font-size: 34px !important; }
+  body .background .liquid-glass-card2 { width: min(360px, 94vw) !important; padding: 16px 12px !important; }
+  body .background .price .card, 
+  body .background .price .card1 { max-width: 260px !important; }
+}
+
 
