@@ -234,26 +234,5 @@
     position: relative !important;
   }
 }
-  /* Price タイトルのモバイル用修正 */
-@media (max-width: 768px) {
-  .title-about {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    right: auto !important;
-    transform: none !important;
-    width: 100% !important;
-    margin: 80px auto 20px auto !important; /* ナビ下に余白 */
-    text-align: center !important;
-    white-space: normal !important;
-    z-index: 5 !important;
-  }
 
-  .title-about .title-1 {
-    font-size: 36px !important;
-    line-height: 1.2 !important;
-    margin: 0 !important;
-    color: #fff !important;
-    text-shadow: 2px 2px 6px rgba(0,0,0,0.35) !important;
-  }
-}
+
