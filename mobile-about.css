@@ -60,7 +60,6 @@
     margin: 0 auto;
     padding: 24px 18px;
     box-sizing: border-box;
-    min-height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -98,36 +97,57 @@
     background-clip: initial !important;
     color: #fff !important;
     padding: 0 !important;
-    margin: 8px 0 !important;
+    margin: 6px 0 !important;
   }
 
   .liquid-glass-card.h1 {
     font-size: 24px !important;
-    line-height: 1.3 !important;
+    line-height: 1.25 !important;
     font-weight: 600 !important;
   }
 
   .liquid-glass-card.p {
-    font-size: 0.95rem !important;
-    line-height: 1.7 !important;
+    font-size: 0.92rem !important;
+    line-height: 1.5 !important;
   }
 
   /* 開発者についてカード */
   .card {
-    background: #F8FBFE !important; /* 背景残す */
+    background: #F8FBFE !important; /* 白背景で可読性UP */
     border: none !important;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08) !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08) !important;
     width: 100% !important;
-    max-width: 100% !important;
-    margin: 20px auto !important;
+    margin: 12px auto !important;
     border-radius: 12px !important;
-    padding: 16px !important;
+    padding: 12px 14px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* ボタンを下に収める */
+    min-height: 260px; /* ボタンがはみ出ない最低高さ */
   }
 
+  /* Mac風の3ボタン */
+  .tools {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 8px;
+  }
+
+  .box {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+  .red { background-color: #ff605c; }
+  .yellow { background-color: #ffbd44; }
+  .green { background-color: #00ca4e; }
+
+  /* テキスト */
   .card__content {
-    padding: 10px 0 !important;
+    padding: 6px 0 !important;
     text-align: left !important;
     color: #333 !important;
+    flex: 1; /* テキスト部分を伸縮させてボタンとバランス調整 */
   }
 
   .card__content h1,
@@ -135,40 +155,38 @@
   .card__content p {
     border: none !important;
     background: none !important;
-    margin: 8px 0 !important;
+    margin: 4px 0 !important;
     color: #333 !important;
+    line-height: 1.35 !important;
   }
 
   .card__content h1 {
-    font-size: 1.4rem !important;
+    font-size: 1.2rem !important;
     font-weight: 600 !important;
   }
 
   .card__content h2 {
-    font-size: 0.95rem !important;
+    font-size: 0.9rem !important;
     font-weight: 500 !important;
   }
 
   .card__content p {
-    font-size: 0.88rem !important;
-    line-height: 1.6 !important;
+    font-size: 0.85rem !important;
+    line-height: 1.4 !important;
   }
 
   /* ボタン類 */
   .animated-button,
   .liquid-glass-button {
-    margin: 20px 0 0 0 !important;
+    margin: 10px auto 0 auto !important; /* 枠内で収まる */
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
-    align-self: flex-start !important;
   }
 
   .animated-button {
-    padding: 12px 24px !important;
-    font-size: 13px !important;
-    margin-left: 15px !important;
-    margin-top: auto !important;
+    padding: 10px 20px !important;
+    font-size: 12px !important;
   }
 
   /* ナビゲーション */
