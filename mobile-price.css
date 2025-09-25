@@ -1,38 +1,35 @@
 /* price.html用のモバイル専用CSS */
 /* このファイルはモバイルデバイスでのみ読み込まれます */
 
-/* モバイル用のデスクトップスタイルをオーバーライド */
 @media screen and (max-width: 768px) {
-  
+
   /* 背景とbodyの調整 */
   html, body {
     min-height: 100vh;
-    padding-bottom: 60px;
+    padding: 0;
+    margin: 0;
     overflow-x: hidden;
     position: relative;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
 
-  /* bodyの背景を確保 */
+  /* メイン背景 */
   .background {
-    position: relative;
     min-height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
+    padding-top: 100px; /* ナビゲーションの少し下から配置開始 */
   }
 
-  /* タイトルセクションのモバイル最適化 */
+  /* タイトル */
   .title-about {
-    position: relative;  /* fixed解除 */
-    top: 0;
-    left: 0;
-    right: 0;
-    max-width: 100%;
-    text-align: center;
-    margin: 20px auto;
-    padding: 0 16px;
-    white-space: normal;
+    position: relative !important;
+    margin: 0 auto 20px auto !important;
+    text-align: center !important;
     z-index: 10;
   }
 
@@ -41,36 +38,32 @@
     line-height: 1.2;
     font-weight: bold;
     color: white;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
   }
 
   /* 料金カード全体コンテナ */
   .liquid-glass-card2 {
-    position: relative;  /* fixed解除して通常フローへ */
-    top: auto;
-    left: auto;
-    transform: none;
-    margin: 20px auto;
+    position: relative !important;
+    margin: 0 auto;
     padding: 20px 16px;
     width: 100%;
     max-width: 420px;
-    min-height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+    border-radius: 20px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px) saturate(1.8);
     -webkit-backdrop-filter: blur(20px) saturate(1.8);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* カード間の余白 */
     z-index: 5;
   }
 
   /* 料金カードリスト */
   .price {
-    display: flex !important;
-    flex-direction: column !important;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
     align-items: center;
     width: 100%;
@@ -85,21 +78,21 @@
     max-width: 280px !important;
     height: auto !important;
     margin: 0 auto;
-    position: relative;
     background: #ffffff;
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
   }
 
   .card:hover,
   .card1:hover {
-    transform: none !important; /* モバイルはホバーエフェクト無効 */
+    transform: none !important; /* モバイルではhover無効 */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   }
 
-  /* カードコンテンツ */
+  /* カード内部 */
   .card__content {
     padding: 20px 16px;
     display: flex;
@@ -109,7 +102,6 @@
     background: #ffffff;
   }
 
-  /* カード画像 */
   .card__image {
     width: 100%;
     max-width: 220px;
@@ -126,7 +118,6 @@
     display: block;
   }
 
-  /* カードテキスト */
   .card__text {
     margin-bottom: 16px;
     width: 100%;
@@ -163,10 +154,10 @@
     font-size: 24px !important;
     font-weight: bold;
     color: #2c5aa0;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
   }
 
-  /* カードバッジ（NEWなど） */
+  /* バッジ（NEWなど） */
   .card__badge {
     position: absolute;
     top: 10px;
@@ -180,27 +171,16 @@
     z-index: 10;
   }
 
-  /* 不要なエフェクト削除 */
+  /* 複雑な装飾はオフ（モバイル軽量化） */
   .card__shine,
   .card__glow {
     display: none;
-  }
-
-  /* 横スクロールを非表示 */
-  .background {
-    overflow-x: hidden;
-  }
-
-  /* モバイル用タイポグラフィの最適化 */
-  * {
-    -webkit-text-size-adjust: 100%;
-    text-size-adjust: 100%;
   }
 }
 
 /* 超小デバイス（縦向きスマホ） */
 @media screen and (max-width: 480px) {
-  .title-about { margin: 16px auto; }
+  .background { padding-top: 80px; }
   .title-1 { font-size: 36px !important; }
   .liquid-glass-card2 { padding: 16px 12px; max-width: 350px; }
   .card, .card1 { max-width: 260px !important; }
@@ -210,13 +190,13 @@
   .card__price { font-size: 20px !important; }
 }
 
-/* 横向き画面の調整 */
+/* 横向き画面 */
 @media screen and (max-width: 768px) and (orientation: landscape) {
-  .title-about { margin-top: 12px; }
+  .background { padding-top: 70px; }
   .title-1 { font-size: 42px !important; }
-  .liquid-glass-card2 { max-height: 80vh; }
+  .liquid-glass-card2 { max-width: 500px; }
   .price {
-    flex-direction: row !important;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
@@ -224,13 +204,15 @@
   .card, .card1 { width: calc(50% - 10px) !important; max-width: 240px !important; }
 }
 
-/* タブレット縦向きの調整 */
+/* タブレット縦向き */
 @media screen and (min-width: 481px) and (max-width: 768px) {
-  .liquid-glass-card2 { max-width: 500px; padding: 24px 20px; }
+  .background { padding-top: 120px; }
   .title-1 { font-size: 60px !important; }
+  .liquid-glass-card2 { max-width: 500px; padding: 24px 20px; }
   .card, .card1 { max-width: 320px !important; }
   .card__content { padding: 20px 16px; }
   .card__image { max-width: 260px; }
   .card__title { font-size: 18px !important; }
   .card__price { font-size: 24px !important; }
 }
+
