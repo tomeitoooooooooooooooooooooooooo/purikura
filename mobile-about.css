@@ -63,10 +63,7 @@
     align-items: center;
     text-align: center !important;
     gap: 16px;
-    border: 2px solid rgba(255, 255, 255, 0.3) !important;
-    border-radius: 15px !important;
-    background: rgba(255, 255, 255, 0.1) !important;
-    backdrop-filter: blur(10px) !important;
+    border: none !important;
   }
 
   .liquid-glass-card2 span,
@@ -88,98 +85,45 @@
   .liquid-glass-card.h1 {
     font-size: 24px !important;
     margin: 12px 0 6px !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    padding: 8px 12px !important;
-    border-radius: 8px !important;
   }
 
   .liquid-glass-card.p {
     font-size: 0.95rem !important;
     line-height: 1.7 !important;
     margin: 0 !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    padding: 8px 12px !important;
-    border-radius: 8px !important;
   }
 
   .card__content {
-    padding: 15px !important;
-    text-align: left !important;
-    min-height: 250px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
-  }
-
-  .card {
-    border: 2px solid rgba(0, 0, 0, 0.1) !important;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
-    margin: 20px 0 !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    min-height: 300px !important;
-    height: auto !important;
+    padding: 0 !important;
   }
 
   .card__content h1 {
     font-size: 1.4rem !important;
-    border: 1px solid rgba(0, 0, 0, 0.1) !important;
-    padding: 8px 12px !important;
-    border-radius: 5px !important;
-    background: rgba(248, 251, 254, 0.8) !important;
-    text-align: left !important;
+    margin: 12px 0 4px !important;
   }
 
   .card__content h2 {
     font-size: 0.95rem !important;
-    border: 1px solid rgba(0, 0, 0, 0.1) !important;
-    padding: 8px 12px !important;
-    border-radius: 5px !important;
-    background: rgba(248, 251, 254, 0.8) !important;
-    text-align: left !important;
+    margin: 0 0 6px !important;
   }
 
   .card__content p {
     font-size: 0.88rem !important;
     line-height: 1.6 !important;
-    margin: 10px 0 !important;
-    border: 1px solid rgba(0, 0, 0, 0.1) !important;
-    padding: 12px 15px !important;
-    border-radius: 5px !important;
-    background: rgba(248, 251, 254, 0.8) !important;
-    text-align: left !important;
+    margin: 0 !important;
   }
 
   .animated-button,
   .liquid-glass-button {
-    margin: 20px 0 0 0 !important;
+    margin: 14px auto 0 !important;
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
-    align-self: flex-start !important;
   }
 
   .animated-button {
     padding: 12px 24px !important;
     font-size: 13px !important;
-    margin-left: 15px !important;
-    margin-top: auto !important;
-  }
-
-  /* Menu text color adjustment for white background overlap */
-  .liquid-glass-navigation {
-    z-index: 1000 !important;
-  }
-
-  .nav-item {
-    color: white !important;
-    transition: color 0.3s ease !important;
-    backdrop-filter: blur(5px) !important;
-  }
-  
-  .nav-item:hover {
-    background: rgba(255, 255, 255, 0.2) !important;
-    color: #333 !important;
   }
 }
 
