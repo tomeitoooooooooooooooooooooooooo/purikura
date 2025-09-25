@@ -1,28 +1,39 @@
-﻿/* Mobile-specific CSS for price.html */
-/* This file will be loaded only on mobile devices */
+/* price.html用のモバイル専用CSS */
+/* このファイルはモバイルデバイスでのみ読み込まれます */
 
-/* Override desktop styles for mobile */
+/* モバイル用のデスクトップスタイルをオーバーライド */
 @media screen and (max-width: 768px) {
   
-  /* Background and body adjustments */
+  /* 背景とbodyの調整 */
   html, body {
     min-height: 100vh;
     padding-bottom: 60px;
     overflow-x: hidden;
+    position: relative;
   }
 
-  /* Title section mobile optimization - SPECIFICATION: above liquid glass card */
+  /* bodyの背景を確保 */
+  .background {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* タイトルセクションのモバイル最適化 - 仕様: 最上部に配置 */
   .title-about {
-    position: static;
-    top: auto;
-    right: auto;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
     max-width: 100%;
     text-align: center;
-    margin: 80px 0 20px 0;
+    margin: 0;
     padding: 0 20px;
     white-space: normal;
-    z-index: 10;
-    order: 1; /* Title first */
+    z-index: 20;
   }
 
   .title-1 {
@@ -33,34 +44,32 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   }
 
-  /* Main container following specification */
-  .cards-price {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    order: 2; /* Card container after title */
-  }
-
-  /* Main card container mobile optimization - SPECIFICATION: centered */
+  /* メインカードコンテナのモバイル最適化 - 仕様: 画面中心に配置 */
   .liquid-glass-card2 {
-    margin: 0 auto 40px auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
     padding: 30px 20px;
-    width: calc(100vw - 30px);
-    max-width: 380px; /* Following mobile card layout standard */
+    width: calc(100vw - 40px);
+    max-width: 400px;
     min-height: auto;
+    max-height: 70vh;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px) saturate(1.8);
     -webkit-backdrop-filter: blur(20px) saturate(1.8);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 24px;
-    order: 3; /* Card after title */
+    z-index: 5;
   }
 
-  /* Price cards container - centered layout */
+  /* 料金カードコンテナ - 中央揃えレイアウト */
   .price {
     display: flex !important;
     flex-direction: column !important;
@@ -71,7 +80,7 @@
     margin: 0 auto;
   }
 
-  /* Individual price cards - perfectly centered */
+  /* 個別料金カード - 完全中央揃え */
   .card,
   .card1 {
     width: 100% !important;
@@ -92,7 +101,7 @@
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
   }
 
-  /* Card content optimization - better centered layout */
+  /* カードコンテンツの最適化 - より中央揃えレイアウト */
   .card__content {
     padding: 25px 20px;
     display: flex;
@@ -102,7 +111,7 @@
     background: #ffffff;
   }
 
-  /* Card images - optimized sizing */
+  /* カード画像 - サイズ最適化 */
   .card__image {
     width: 100%;
     max-width: 220px;
@@ -119,7 +128,7 @@
     display: block;
   }
 
-  /* Card text content - improved typography */
+  /* カードテキストコンテンツ - タイポグラフィ改善 */
   .card__text {
     margin-bottom: 20px;
     width: 100%;
@@ -142,7 +151,7 @@
     padding: 0 10px;
   }
 
-  /* Card footer with price - enhanced styling */
+  /* 価格付きカードフッター - スタイル強化 */
   .card__footer {
     width: 100%;
     display: flex;
@@ -159,7 +168,7 @@
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
   }
 
-  /* Card badge (NEW) */
+  /* カードバッジ（NEW） */
   .card__badge {
     position: absolute;
     top: 10px;
@@ -173,34 +182,36 @@
     z-index: 10;
   }
 
-  /* Card effects optimization for mobile */
+  /* モバイル用カードエフェクト最適化 */
   .card__shine,
   .card__glow {
-    display: none; /* Disable complex effects on mobile for performance */
+    display: none; /* パフォーマンスのためモバイルでは複雑エフェクトを無効化 */
   }
 
-  /* Remove hover effects on mobile */
+  /* モバイルでホバーエフェクトを除去 */
   .card:hover,
   .card1:hover {
     transform: none !important;
   }
 
-  /* Hide horizontal scroll */
+  /* 横スクロールを非表示 */
   .background {
     overflow-x: hidden;
   }
 
-  /* Improve touch targets */
-
-  /* Optimize typography for mobile */
+  /* モバイル用タイポグラフィの最適化 */
   * {
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
   }
 }
 
-/* Extra small devices (phones in portrait mode) */
+/* 超小デバイス（縦向きスマホ） */
 @media screen and (max-width: 480px) {
+
+  .title-about {
+    top: 70px;
+  }
 
   .title-1 {
     font-size: 45px !important;
@@ -208,12 +219,13 @@
 
   .liquid-glass-card2 {
     padding: 20px 15px;
-    margin: 10px auto;
+    width: calc(100vw - 30px);
+    max-width: 350px;
   }
 
   .card,
   .card1 {
-    max-width: 280px !important;
+    max-width: 260px !important;
   }
 
   .card__content {
@@ -221,7 +233,7 @@
   }
 
   .card__image {
-    max-width: 220px;
+    max-width: 200px;
   }
 
   .card__title {
@@ -238,15 +250,19 @@
   }
 }
 
-/* Landscape orientation adjustments */
+/* 横向き画面の調整 */
 @media screen and (max-width: 768px) and (orientation: landscape) {
   
   .title-about {
-    margin: 60px 0 20px 0;
+    top: 60px;
   }
 
   .title-1 {
     font-size: 45px !important;
+  }
+
+  .liquid-glass-card2 {
+    max-height: 80vh;
   }
 
   .price {
@@ -267,7 +283,7 @@
   }
 }
 
-/* Tablet portrait adjustments */
+/* タブレット縦向きの調整 */
 @media screen and (min-width: 481px) and (max-width: 768px) {
   
   .liquid-glass-card2 {
@@ -305,5 +321,3 @@
     font-size: 26px !important;
   }
 }
-
-
