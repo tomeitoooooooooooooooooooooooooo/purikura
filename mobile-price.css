@@ -154,4 +154,61 @@
     max-width: 240px !important;
   }
 }
+/* === Priceモバイル用・最終修正版 === */
+@media (max-width: 768px) {
+
+  /* タイトルを中央寄せで幅いっぱいに */
+  body .background .title-about {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    left: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto 20px auto !important;
+    text-align: center !important;
+    white-space: normal !important;
+  }
+
+  body .background .title-about .title-1 {
+    font-size: 36px !important;  /* スマホに合うサイズ */
+    line-height: 1.2 !important;
+    margin: 0 !important;
+    color: #fff !important;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.35) !important;
+  }
+
+  /* 料金カードの外枠を広くとる */
+  body .background .liquid-glass-card2 {
+    width: 95% !important;
+    max-width: 480px !important; /* スマホ幅に自然に合わせる */
+    margin: 0 auto 24px auto !important;
+    padding: 20px 16px !important;
+    border-radius: 20px !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+    backdrop-filter: blur(20px) saturate(1.8) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(1.8) !important;
+  }
+
+  /* カードリストを中央に */
+  body .background .price {
+    width: 100% !important;
+    max-width: none !important;  /* 細すぎを防止 */
+    margin: 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+    align-items: center !important;
+  }
+
+  /* 個別カード */
+  body .background .price .card,
+  body .background .price .card1 {
+    width: 90% !important;       /* スマホ幅に余裕を持たせる */
+    max-width: 400px !important;
+    margin: 0 auto !important;
+  }
+}
+
 
