@@ -301,4 +301,53 @@
     font-size: 24px !important;
   }
 }
+@media screen and (max-width: 768px) {
+
+  /* タイトルを一番上（ナビの下）に */
+  .title-about {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    margin: 80px auto 20px auto !important; /* ナビ下に余白 */
+    text-align: center !important;
+    white-space: normal !important;
+    z-index: 5 !important;
+    order: 1; /* flexの並び順制御（背景内なら最初に来る） */
+  }
+
+  .title-about .title-1 {
+    font-size: 36px !important;
+    line-height: 1.2 !important;
+    font-weight: bold !important;
+    color: #fff !important;
+    margin: 0 !important;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.35) !important;
+  }
+
+  /* 価格ボックスをタイトル直下に */
+  .liquid-glass-card2 {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    margin: 20px auto 24px auto !important; /* タイトル下に自然な余白 */
+    width: 90% !important;
+    max-width: 420px !important;
+    padding: 20px 16px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(20px) saturate(1.8) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(1.8) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 20px !important;
+    z-index: 4 !important;
+  }
+}
+
 
