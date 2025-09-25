@@ -125,7 +125,7 @@
 
   .card__content h1 {
     font-size: 1.4rem !important;
-    margin: 10px 0 !important;
+    margin: 5px 0 10px 0 !important;
     border: 1px solid rgba(0, 0, 0, 0.1) !important;
     padding: 8px 12px !important;
     border-radius: 5px !important;
@@ -135,7 +135,7 @@
 
   .card__content h2 {
     font-size: 0.95rem !important;
-    margin: 10px 0 !important;
+    margin: 10px 0 5px 0 !important;
     border: 1px solid rgba(0, 0, 0, 0.1) !important;
     padding: 8px 12px !important;
     border-radius: 5px !important;
