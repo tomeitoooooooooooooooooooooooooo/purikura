@@ -117,6 +117,7 @@
     border: none !important;
     box-shadow: 0 4px 10px rgba(0,0,0,0.08) !important;
     width: 100% !important;
+    height: auto !important;
     margin: 12px auto !important;
     border-radius: 12px !important;
     padding: 12px 14px !important;
@@ -220,3 +221,4 @@
     max-width: 200px !important;
   }
 }
+
