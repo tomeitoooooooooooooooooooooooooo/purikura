@@ -717,74 +717,50 @@ margin-left: 20px;
     transform: scale(1);
   }
 }
-/* ===== スマホ用レイアウト修正 ===== */
+
 @media (max-width: 768px) {
-  /* タイトルを最上部に中央寄せ */
+
+  /* タイトルを消す */
   .title-about {
-    position: relative !important; /* absolute解除 */
-    top: auto !important;
-    right: auto !important;
-    left: auto !important;
-    transform: none !important;
-    width: 100% !important;
-    margin: 80px auto 20px auto !important; /* ナビの下に余白 */
-    text-align: center !important;
-    white-space: normal !important;
-  }
-  .title-about .title-1 {
-    font-size: 36px !important;
-    line-height: 1.2 !important;
-    color: #fff !important;
-    margin: 0 !important;
-    text-shadow: 2px 2px 6px rgba(0,0,0,0.35) !important;
+    display: none !important;
   }
 
-  /* プライス一覧の外枠（カードコンテナ） */
-  .liquid-glass-card2 {
-    position: relative !important; /* absolute解除 */
-    top: auto !important;
-    left: auto !important;
-    transform: none !important;
-    margin: 20px auto 40px auto !important; /* タイトルのすぐ下 */
-    width: 92% !important;
-    max-width: 420px !important;
-    padding: 20px 16px !important;
-    border-radius: 20px !important;
-    background: rgba(255, 255, 255, 0.1) !important;
-    backdrop-filter: blur(20px) saturate(1.8) !important;
-    -webkit-backdrop-filter: blur(20px) saturate(1.8) !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
-  }
-
-  /* プライスカード群を縦並びに */
-  .price {
+  /* カード群を縦中央に寄せる */
+  .background {
+    display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    gap: 16px !important;
-    margin-top: 10px !important;
+    justify-content: center !important;  /* ← これで縦中央揃え */
+    min-height: 100vh !important;        /* 画面全体を高さ基準に */
+    padding: 0 0 40px 0 !important;
   }
 
-  .card,
-  .card1 {
+  .liquid-glass-card2 {
+    position: relative !important;
+    margin: 0 auto !important;
+    padding: 24px 18px !important;
+    width: 94% !important;
+    max-width: 420px !important;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px) saturate(1.8);
+    -webkit-backdrop-filter: blur(20px) saturate(1.8);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .price {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 24px !important;
     width: 100% !important;
-    max-width: 320px !important;
-    height: auto !important;
     margin: 0 auto !important;
   }
 
-  .card__image {
-    height: auto !important;
-    max-height: 160px !important;
-  }
-
-  .card__title {
-    font-size: 1rem !important;
-  }
-  .card__price {
-    font-size: 1.1rem !important;
+  .card, .card1 {
+    width: 95% !important;
+    max-width: 340px !important;
+    margin: 0 auto !important;
   }
 }
-
-
-
-
