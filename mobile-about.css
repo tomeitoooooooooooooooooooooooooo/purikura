@@ -107,6 +107,10 @@
   .card__content {
     padding: 15px !important;
     text-align: left !important;
+    min-height: 250px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
   }
 
   .card {
@@ -115,6 +119,8 @@
     margin: 20px 0 !important;
     width: 100% !important;
     max-width: 100% !important;
+    min-height: 300px !important;
+    height: auto !important;
   }
 
   .card__content h1 {
@@ -154,12 +160,31 @@
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
+    align-self: flex-start !important;
   }
 
   .animated-button {
     padding: 12px 24px !important;
     font-size: 13px !important;
     margin-left: 15px !important;
+    margin-top: auto !important;
+  }
+
+  /* Menu text color adjustment for white background overlap */
+  .liquid-glass-navigation {
+    z-index: 1000 !important;
+  }
+
+  .nav-item {
+    color: white !important;
+    transition: color 0.3s ease !important;
+    background: rgba(0, 0, 0, 0.1) !important;
+    backdrop-filter: blur(5px) !important;
+  }
+  
+  .nav-item:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: #333 !important;
   }
 }
 
