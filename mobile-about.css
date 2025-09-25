@@ -116,7 +116,7 @@
     background: #F8FBFE !important; /* 白背景で可読性UP */
     border: none !important;
     box-shadow: 0 4px 10px rgba(0,0,0,0.08) !important;
-    width: 150px !important;
+    width: 225px !important;
     height: auto !important;
     margin: 12px auto !important;
     border-radius: 12px !important;
@@ -221,6 +221,7 @@
     max-width: 200px !important;
   }
 }
+
 
 
 
