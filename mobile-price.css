@@ -154,47 +154,64 @@
     max-width: 240px !important;
   }
 }
-/* === Priceモバイル用・最終修正版 === */
 @media (max-width: 768px) {
 
-  /* タイトルを中央寄せで幅いっぱいに */
+  /* 背景全体のフローをナビ下から始める */
+  body .background {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    padding-top: 100px !important; /* ナビ下に余白 */
+  }
+
+  /* タイトルは中央・通常フロー */
   body .background .title-about {
     position: relative !important;
     top: auto !important;
-    right: auto !important;
     left: auto !important;
+    right: auto !important;
     transform: none !important;
     width: 100% !important;
-    max-width: 100% !important;
     margin: 0 auto 20px auto !important;
     text-align: center !important;
     white-space: normal !important;
+    z-index: 5 !important;
   }
 
   body .background .title-about .title-1 {
-    font-size: 36px !important;  /* スマホに合うサイズ */
+    font-size: 36px !important;
     line-height: 1.2 !important;
-    margin: 0 !important;
+    font-weight: bold !important;
     color: #fff !important;
+    margin: 0 !important;
     text-shadow: 2px 2px 6px rgba(0,0,0,0.35) !important;
   }
 
-  /* 料金カードの外枠を広くとる */
+  /* 料金ボックス（タイトル直下に配置） */
   body .background .liquid-glass-card2 {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
     width: 95% !important;
-    max-width: 480px !important; /* スマホ幅に自然に合わせる */
+    max-width: 420px !important;
     margin: 0 auto 24px auto !important;
     padding: 20px 16px !important;
     border-radius: 20px !important;
     background: rgba(255, 255, 255, 0.12) !important;
     backdrop-filter: blur(20px) saturate(1.8) !important;
     -webkit-backdrop-filter: blur(20px) saturate(1.8) !important;
+    border: 1px solid rgba(255, 255, 255, 0.22) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 18px !important;
   }
 
-  /* カードリストを中央に */
+  /* 料金カードのリスト */
   body .background .price {
     width: 100% !important;
-    max-width: none !important;  /* 細すぎを防止 */
     margin: 0 auto !important;
     display: flex !important;
     flex-direction: column !important;
@@ -205,10 +222,13 @@
   /* 個別カード */
   body .background .price .card,
   body .background .price .card1 {
-    width: 90% !important;       /* スマホ幅に余裕を持たせる */
-    max-width: 400px !important;
+    width: 100% !important;
+    max-width: 360px !important;
     margin: 0 auto !important;
+    background: #fff !important;
+    border-radius: 16px !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important;
+    overflow: hidden !important;
+    position: relative !important;
   }
 }
-
-
