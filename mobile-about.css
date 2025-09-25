@@ -1,4 +1,4 @@
-/* Responsive overrides for the about page */
+/* aboutページ用のレスポンシブオーバーライド */
 @media (max-width: 768px) {
   html,
   body {
@@ -63,7 +63,10 @@
     align-items: center;
     text-align: center !important;
     gap: 16px;
-    border: none !important;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 15px !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(10px) !important;
   }
 
   .liquid-glass-card2 span,
@@ -85,37 +88,69 @@
   .liquid-glass-card.h1 {
     font-size: 24px !important;
     margin: 12px 0 6px !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    padding: 8px 12px !important;
+    border-radius: 8px !important;
+    background: rgba(255, 255, 255, 0.05) !important;
   }
 
   .liquid-glass-card.p {
     font-size: 0.95rem !important;
     line-height: 1.7 !important;
     margin: 0 !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    padding: 8px 12px !important;
+    border-radius: 8px !important;
+    background: rgba(255, 255, 255, 0.05) !important;
   }
 
   .card__content {
-    padding: 0 !important;
+    padding: 15px !important;
+    text-align: left !important;
+  }
+
+  .card {
+    border: 2px solid rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    margin: 20px 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
   .card__content h1 {
     font-size: 1.4rem !important;
-    margin: 12px 0 4px !important;
+    margin: 10px 0 !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    padding: 8px 12px !important;
+    border-radius: 5px !important;
+    background: rgba(248, 251, 254, 0.8) !important;
+    text-align: left !important;
   }
 
   .card__content h2 {
     font-size: 0.95rem !important;
-    margin: 0 0 6px !important;
+    margin: 10px 0 !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    padding: 8px 12px !important;
+    border-radius: 5px !important;
+    background: rgba(248, 251, 254, 0.8) !important;
+    text-align: left !important;
   }
 
   .card__content p {
     font-size: 0.88rem !important;
     line-height: 1.6 !important;
-    margin: 0 !important;
+    margin: 10px 0 !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    padding: 12px 15px !important;
+    border-radius: 5px !important;
+    background: rgba(248, 251, 254, 0.8) !important;
+    text-align: left !important;
   }
 
   .animated-button,
   .liquid-glass-button {
-    margin: 14px auto 0 !important;
+    margin: 20px 0 0 0 !important;
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
@@ -124,6 +159,7 @@
   .animated-button {
     padding: 12px 24px !important;
     font-size: 13px !important;
+    margin-left: 15px !important;
   }
 }
 
