@@ -1,4 +1,4 @@
-/* aboutページ用のレスポンシブオーバーライド */
+/* Responsive overrides for the about page */
 @media (max-width: 768px) {
   html,
   body {
@@ -64,9 +64,6 @@
     text-align: center !important;
     gap: 16px;
     border: none !important;
-    background: transparent !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
   }
 
   .liquid-glass-card2 span,
@@ -114,10 +111,6 @@
     font-size: 0.88rem !important;
     line-height: 1.6 !important;
     margin: 0 !important;
-    border: none !important;
-    background: transparent !important;
-    text-shadow: none !important;
-    box-shadow: none !important;
   }
 
   .animated-button,
@@ -131,42 +124,6 @@
   .animated-button {
     padding: 12px 24px !important;
     font-size: 13px !important;
-  }
-
-  /* Remove borders and frames from text elements */
-  .liquid-glass-card.h1,
-  .liquid-glass-card.p,
-  .card__content h1,
-  .card__content h2,
-  .card__content p {
-    border: none !important;
-    outline: none !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-    background: transparent !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-  }
-
-  /* Remove card background and borders */
-  .card {
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-  }
-
-  /* Ensure all text in about sections has no frames */
-  .liquid-glass-card2 h1,
-  .liquid-glass-card2 p,
-  .liquid-glass-card3 h1,
-  .liquid-glass-card3 p {
-    border: none !important;
-    outline: none !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-    background: transparent !important;
   }
 }
 
