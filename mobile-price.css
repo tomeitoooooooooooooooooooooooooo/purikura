@@ -22,41 +22,39 @@
     align-items: center;
   }
 
-  /* タイトルセクションのモバイル最適化 - 仕様: 最上部に配置 */
+  /* タイトルセクションのモバイル最適化 */
   .title-about {
-    position: fixed;
-    top: 80px;
+    position: relative;  /* fixed解除 */
+    top: 0;
     left: 0;
     right: 0;
     max-width: 100%;
     text-align: center;
-    margin: 0;
-    padding: 0 20px;
+    margin: 20px auto;
+    padding: 0 16px;
     white-space: normal;
-    z-index: 20;
+    z-index: 10;
   }
 
   .title-1 {
-    font-size: 60px !important;
-    line-height: 1.1;
+    font-size: 48px !important;
+    line-height: 1.2;
     font-weight: bold;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
   }
 
-  /* メインカードコンテナのモバイル最適化 - 仕様: 画面中心に配置 */
+  /* 料金カード全体コンテナ */
   .liquid-glass-card2 {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0;
-    padding: 30px 20px;
-    width: calc(100vw - 40px);
-    max-width: 400px;
+    position: relative;  /* fixed解除して通常フローへ */
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 20px auto;
+    padding: 20px 16px;
+    width: 100%;
+    max-width: 420px;
     min-height: auto;
-    max-height: 70vh;
-    overflow-y: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -65,22 +63,22 @@
     backdrop-filter: blur(20px) saturate(1.8);
     -webkit-backdrop-filter: blur(20px) saturate(1.8);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 24px;
+    border-radius: 20px;
     z-index: 5;
   }
 
-  /* 料金カードコンテナ - 中央揃えレイアウト */
+  /* 料金カードリスト */
   .price {
     display: flex !important;
     flex-direction: column !important;
     gap: 20px;
     align-items: center;
     width: 100%;
-    max-width: 320px;
+    max-width: 360px;
     margin: 0 auto;
   }
 
-  /* 個別料金カード - 完全中央揃え */
+  /* 個別料金カード */
   .card,
   .card1 {
     width: 100% !important;
@@ -97,13 +95,13 @@
 
   .card:hover,
   .card1:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    transform: none !important; /* モバイルはホバーエフェクト無効 */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   }
 
-  /* カードコンテンツの最適化 - より中央揃えレイアウト */
+  /* カードコンテンツ */
   .card__content {
-    padding: 25px 20px;
+    padding: 20px 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -111,11 +109,11 @@
     background: #ffffff;
   }
 
-  /* カード画像 - サイズ最適化 */
+  /* カード画像 */
   .card__image {
     width: 100%;
     max-width: 220px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     border-radius: 12px;
     overflow: hidden;
   }
@@ -128,16 +126,16 @@
     display: block;
   }
 
-  /* カードテキストコンテンツ - タイポグラフィ改善 */
+  /* カードテキスト */
   .card__text {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     width: 100%;
   }
 
   .card__title {
-    font-size: 20px !important;
+    font-size: 18px !important;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     color: #333;
     letter-spacing: 0.5px;
   }
@@ -145,30 +143,30 @@
   .card__title1,
   .card__title2 {
     font-size: 12px !important;
-    line-height: 1.5;
+    line-height: 1.4;
     color: #666;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     padding: 0 10px;
   }
 
-  /* 価格付きカードフッター - スタイル強化 */
+  /* 価格部分 */
   .card__footer {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 10px;
+    padding-top: 8px;
     border-top: 1px solid #f0f0f0;
   }
 
   .card__price {
-    font-size: 28px !important;
+    font-size: 24px !important;
     font-weight: bold;
     color: #2c5aa0;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
   }
 
-  /* カードバッジ（NEW） */
+  /* カードバッジ（NEWなど） */
   .card__badge {
     position: absolute;
     top: 10px;
@@ -182,16 +180,10 @@
     z-index: 10;
   }
 
-  /* モバイル用カードエフェクト最適化 */
+  /* 不要なエフェクト削除 */
   .card__shine,
   .card__glow {
-    display: none; /* パフォーマンスのためモバイルでは複雑エフェクトを無効化 */
-  }
-
-  /* モバイルでホバーエフェクトを除去 */
-  .card:hover,
-  .card1:hover {
-    transform: none !important;
+    display: none;
   }
 
   /* 横スクロールを非表示 */
@@ -208,116 +200,37 @@
 
 /* 超小デバイス（縦向きスマホ） */
 @media screen and (max-width: 480px) {
-
-  .title-about {
-    top: 70px;
-  }
-
-  .title-1 {
-    font-size: 45px !important;
-  }
-
-  .liquid-glass-card2 {
-    padding: 20px 15px;
-    width: calc(100vw - 30px);
-    max-width: 350px;
-  }
-
-  .card,
-  .card1 {
-    max-width: 260px !important;
-  }
-
-  .card__content {
-    padding: 15px 12px;
-  }
-
-  .card__image {
-    max-width: 200px;
-  }
-
-  .card__title {
-    font-size: 16px !important;
-  }
-
-  .card__title1,
-  .card__title2 {
-    font-size: 11px !important;
-  }
-
-  .card__price {
-    font-size: 20px !important;
-  }
+  .title-about { margin: 16px auto; }
+  .title-1 { font-size: 36px !important; }
+  .liquid-glass-card2 { padding: 16px 12px; max-width: 350px; }
+  .card, .card1 { max-width: 260px !important; }
+  .card__content { padding: 15px 12px; }
+  .card__image { max-width: 200px; }
+  .card__title { font-size: 16px !important; }
+  .card__price { font-size: 20px !important; }
 }
 
 /* 横向き画面の調整 */
 @media screen and (max-width: 768px) and (orientation: landscape) {
-  
-  .title-about {
-    top: 60px;
-  }
-
-  .title-1 {
-    font-size: 45px !important;
-  }
-
-  .liquid-glass-card2 {
-    max-height: 80vh;
-  }
-
+  .title-about { margin-top: 12px; }
+  .title-1 { font-size: 42px !important; }
+  .liquid-glass-card2 { max-height: 80vh; }
   .price {
     flex-direction: row !important;
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
   }
-
-  .card,
-  .card1 {
-    width: calc(50% - 10px) !important;
-    max-width: 250px !important;
-  }
-
-  .card__image {
-    max-width: 180px;
-  }
+  .card, .card1 { width: calc(50% - 10px) !important; max-width: 240px !important; }
 }
 
 /* タブレット縦向きの調整 */
 @media screen and (min-width: 481px) and (max-width: 768px) {
-  
-  .liquid-glass-card2 {
-    max-width: 500px;
-    padding: 30px 25px;
-  }
-
-  .title-1 {
-    font-size: 70px !important;
-  }
-
-  .card,
-  .card1 {
-    max-width: 350px !important;
-  }
-
-  .card__content {
-    padding: 25px 20px;
-  }
-
-  .card__image {
-    max-width: 280px;
-  }
-
-  .card__title {
-    font-size: 20px !important;
-  }
-
-  .card__title1,
-  .card__title2 {
-    font-size: 13px !important;
-  }
-
-  .card__price {
-    font-size: 26px !important;
-  }
+  .liquid-glass-card2 { max-width: 500px; padding: 24px 20px; }
+  .title-1 { font-size: 60px !important; }
+  .card, .card1 { max-width: 320px !important; }
+  .card__content { padding: 20px 16px; }
+  .card__image { max-width: 260px; }
+  .card__title { font-size: 18px !important; }
+  .card__price { font-size: 24px !important; }
 }
