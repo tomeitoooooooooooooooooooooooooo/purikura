@@ -52,7 +52,7 @@
     top: auto;
     left: auto;
     transform: none;
-    margin: 40px auto 24px auto;
+    margin: 400px auto 24px auto;
     /* ← 上を40pxにして下に下げる */
     padding: 20px 16px;
     width: 90%;
@@ -301,3 +301,4 @@
     font-size: 24px !important;
   }
 }
+
