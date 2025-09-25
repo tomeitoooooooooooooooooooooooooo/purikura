@@ -91,7 +91,6 @@
     border: 1px solid rgba(255, 255, 255, 0.2) !important;
     padding: 8px 12px !important;
     border-radius: 8px !important;
-    background: rgba(255, 255, 255, 0.05) !important;
   }
 
   .liquid-glass-card.p {
@@ -101,7 +100,6 @@
     border: 1px solid rgba(255, 255, 255, 0.2) !important;
     padding: 8px 12px !important;
     border-radius: 8px !important;
-    background: rgba(255, 255, 255, 0.05) !important;
   }
 
   .card__content {
@@ -134,7 +132,6 @@
 
   .card__content h2 {
     font-size: 0.95rem !important;
-    margin: 10px !important;
     border: 1px solid rgba(0, 0, 0, 0.1) !important;
     padding: 8px 12px !important;
     border-radius: 5px !important;
@@ -177,7 +174,6 @@
   .nav-item {
     color: white !important;
     transition: color 0.3s ease !important;
-    background: rgba(0, 0, 0, 0.1) !important;
     backdrop-filter: blur(5px) !important;
   }
   
@@ -198,3 +194,4 @@
     max-width: 200px !important;
   }
 }
+
