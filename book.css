@@ -495,5 +495,34 @@
 .button:not(:last-child) {
   margin-bottom: 64px;
 }
+@media (max-width: 768px) {
+  /* タイトル非表示 */
+  .title-about {
+    display: none !important;
+  }
+
+  /* カードを中央寄せ */
+  .liquid-glass-card2 {
+    position: relative !important;
+    margin: 25vh auto 0 auto !important;  /* ← 上に画面比で200px余白 */
+    padding: 24px 18px !important;
+    width: 90% !important;
+    max-width: 420px !important;
+
+    /* 見た目の背景 */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px) saturate(1.8);
+    -webkit-backdrop-filter: blur(20px) saturate(1.8);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* ← 中央寄せ */
+    text-align: center;
+  }
+}
+
 
 
