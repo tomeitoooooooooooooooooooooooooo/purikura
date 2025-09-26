@@ -732,16 +732,16 @@ margin-left: 20px;
     align-items: center !important;
     justify-content: flex-start !important;
     min-height: 100vh !important;
-
-    /* ここは最小限に */
-    padding-top: 0 !important;
-    padding-bottom: 40px !important;
+    padding: 0 0 40px 0 !important; /* 上のpaddingは消す */
   }
 
   /* 料金カードコンテナ */
   .liquid-glass-card2 {
     position: relative !important;
-    margin: 280px auto 24px auto !important;  /* ← ここで下げる */
+
+    /* 画面高さの25%を余白にする */
+    margin: 25vh auto 24px auto !important;
+
     padding: 24px 18px !important;
     width: 94% !important;
     max-width: 420px !important;
@@ -752,7 +752,6 @@ margin-left: 20px;
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
 
-  /* 料金カードリスト */
   .price {
     display: flex !important;
     flex-direction: column !important;
@@ -762,7 +761,6 @@ margin-left: 20px;
     margin: 0 auto !important;
   }
 
-  /* 個別カード */
   .card, .card1 {
     width: 95% !important;
     max-width: 340px !important;
