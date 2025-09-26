@@ -513,7 +513,7 @@
 
     /* 位置・サイズ */
     margin: 15vh auto 40px auto !important;  /* ナビ下に画面比で余白 */
-    width: 75% !important;                   /* 横幅は画面の90% */
+    width: 85% !important;                   /* 横幅は画面の90% */
     max-width: 400px !important;             /* 最大幅を400pxに制限 */
     min-height: auto !important;
     border-radius: 20px;
@@ -564,3 +564,4 @@ html, body {
   min-height: 100vh;
   padding-bottom: 125px;
 }
+
