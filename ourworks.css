@@ -178,13 +178,12 @@ main {
   }
 }
 @media screen and (max-width: 768px) {
-
-  .stage {
-    width: 100%;
-    margin-top: 80px; /* ← 上に余白を設ける */
+  .sphere {
+    margin-top: 40px; /* 画像グリッドの上に余白を追加 */
   }
-
 }
+
+
 
 
 
