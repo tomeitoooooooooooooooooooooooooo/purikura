@@ -496,7 +496,6 @@
   margin-bottom: 64px;
 }
 
-/* --- book.html モバイル専用調整 --- */
 @media (max-width: 768px) {
 
   /* タイトルを非表示（必要なら） */
@@ -514,7 +513,7 @@
 
     /* 位置・サイズ */
     margin: 15vh auto 40px auto !important;  /* ナビ下に画面比で余白 */
-    width: 60% !important;                   /* 横幅は画面の90% */
+    width: 75% !important;                   /* 横幅は画面の90% */
     max-width: 400px !important;             /* 最大幅を400pxに制限 */
     min-height: auto !important;
     border-radius: 20px;
@@ -559,4 +558,9 @@
     font-size: 0.9rem !important;
     padding: 10px 16px !important;
   }
+}
+/* 余白 */
+html, body {
+  min-height: 100vh;
+  padding-bottom: 125px;
 }
