@@ -565,22 +565,22 @@ html, body {
   padding-bottom: 125px;
 }
 @media (max-width: 768px) {
-
   .liquid-glass-card2 {
-    width: 85% !important;
-    max-width: 400px !important;
-    box-sizing: border-box !important; /* Safariのpadding計算を統一 */
+    width: 85vw !important;          /* → %ではなくvwに変更して画面幅基準に */
+    max-width: none !important;      /* Safariで制限されないように一旦解除 */
+    box-sizing: border-box !important; /* paddingやborderを含めて幅計算 */
     margin: 15vh auto 40px auto !important;
     padding: 20px 16px !important;
   }
 }
 
-/* Safari 固有バグ対策 */
+/* Safari/iOS専用ハック */
 @supports (-webkit-touch-callout: none) {
   .liquid-glass-card2 {
-    width: 85% !important;        /* Safariでも同じ%を適用 */
-    max-width: 400px !important;
+    width: 85vw !important;   /* Safari専用でvwを強制 */
   }
 }
+
+
 
 
