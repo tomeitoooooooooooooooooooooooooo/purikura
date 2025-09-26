@@ -552,3 +552,33 @@
     padding: 10px 16px !important;
   }
 }
+
+@media (max-width: 768px) {
+
+  /* カード全体の配置 */
+  .liquid-glass-card2 {
+    margin: 15vh auto 0 auto !important;  /* 画面比で余白を取る（Safari以外でも統一） */
+    width: 90% !important;                /* 横幅は画面の90% */
+    max-width: 400px !important;          /* 最大幅を400pxに制限 */
+    padding: 20px 16px !important;
+  }
+
+  /* 画像の調整 */
+  .liquid-glass-card2 img {
+    width: 80% !important;       /* 画像をカード内の80%に縮小 */
+    height: auto !important;     /* アスペクト比維持 */
+    display: block;
+    margin: 0 auto 20px auto;    /* 中央寄せ＆下に余白 */
+    border-radius: 12px;
+  }
+
+  /* テキスト全体のサイズ調整 */
+  .liquid-glass-card2 h1,
+  .liquid-glass-card2 h2,
+  .liquid-glass-card2 p {
+    font-size: 0.9rem !important;  /* テキストをやや小さめに */
+    line-height: 1.4 !important;
+    text-align: center !important;
+    word-break: break-word;
+  }
+}
