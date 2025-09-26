@@ -177,6 +177,15 @@ main {
     --page-padding: clamp(16px, 8vw, 28px);
   }
 }
+@media screen and (max-width: 768px) {
+
+  .stage {
+    width: 100%;
+    margin-top: 80px; /* ← 上に余白を設ける */
+  }
+
+}
+
 
 
 
