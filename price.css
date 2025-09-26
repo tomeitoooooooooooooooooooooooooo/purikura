@@ -720,24 +720,25 @@ margin-left: 20px;
 
 @media (max-width: 768px) {
 
-  /* タイトルを消す */
+  /* タイトル非表示 */
   .title-about {
     display: none !important;
   }
 
-  /* カード群を縦中央に寄せる */
+  /* 背景の中でカードを下寄せ配置 */
   .background {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    justify-content: center !important;  /* ← これで縦中央揃え */
-    min-height: 100vh !important;        /* 画面全体を高さ基準に */
-    padding: 0 0 40px 0 !important;
+    justify-content: flex-start !important;
+    min-height: 100vh !important;
+    padding-top: 200px !important;  /* ← ここで大きく下に下げる */
+    padding-bottom: 40px !important;
   }
 
   .liquid-glass-card2 {
     position: relative !important;
-    margin: 0 auto !important;
+    margin: 40px auto 0 auto !important;  /* ← さらに下げる余白 */
     padding: 24px 18px !important;
     width: 94% !important;
     max-width: 420px !important;
@@ -752,7 +753,6 @@ margin-left: 20px;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    justify-content: center !important;
     gap: 24px !important;
     width: 100% !important;
     margin: 0 auto !important;
