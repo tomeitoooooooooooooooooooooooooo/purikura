@@ -725,20 +725,21 @@ margin-left: 20px;
     display: none !important;
   }
 
-  /* 背景の中でカードを下寄せ配置 */
+  /* 背景全体のレイアウト */
   .background {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: flex-start !important;
     min-height: 100vh !important;
-    padding-top: 300px !important;  /* ← ここで大きく下に下げる */
+    padding-top: 180px !important;  /* ナビの下から余裕を持たせる */
     padding-bottom: 40px !important;
   }
 
+  /* 料金カードの外枠 */
   .liquid-glass-card2 {
     position: relative !important;
-    margin: 200px auto 0 auto !important;  /* ← さらに下げる余白 */
+    margin: 0 auto 24px auto !important;
     padding: 24px 18px !important;
     width: 94% !important;
     max-width: 420px !important;
@@ -749,6 +750,7 @@ margin-left: 20px;
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
 
+  /* カード群（Price内） */
   .price {
     display: flex !important;
     flex-direction: column !important;
@@ -758,11 +760,10 @@ margin-left: 20px;
     margin: 0 auto !important;
   }
 
+  /* 個別カード */
   .card, .card1 {
     width: 95% !important;
     max-width: 340px !important;
     margin: 0 auto !important;
   }
 }
-
-
