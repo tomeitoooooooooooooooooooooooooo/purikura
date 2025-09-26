@@ -732,16 +732,13 @@ margin-left: 20px;
     align-items: center !important;
     justify-content: flex-start !important;
     min-height: 100vh !important;
-
-    /* ナビゲーションバー分の高さをCSS変数で管理 */
-    --nav-height: 72px;           /* メニューバーの高さ */
-    padding-top: calc(var(--nav-height) + 40px) !important;
+    padding-top: 300px !important;  /* ← ここで大きく下に下げる */
     padding-bottom: 40px !important;
   }
 
   .liquid-glass-card2 {
     position: relative !important;
-    margin: 0 auto 24px auto !important;  /* margin-topはゼロにする */
+    margin: 200px auto 0 auto !important;  /* ← さらに下げる余白 */
     padding: 24px 18px !important;
     width: 94% !important;
     max-width: 420px !important;
@@ -767,4 +764,3 @@ margin-left: 20px;
     margin: 0 auto !important;
   }
 }
-
